@@ -1,0 +1,12 @@
+F:\MobifinMockups\MobifinMockups
+--output-path=obj\Release\netcoreapp2.0\
+--application-name=MobifinMockups
+--content-root=F:\MobifinMockups\MobifinMockups
+--file=F:\MobifinMockups\MobifinMockups\Views\Home\About.cshtml
+--file=F:\MobifinMockups\MobifinMockups\Views\Home\Contact.cshtml
+--file=F:\MobifinMockups\MobifinMockups\Views\Home\Index.cshtml
+--file=F:\MobifinMockups\MobifinMockups\Views\Shared\Error.cshtml
+--file=F:\MobifinMockups\MobifinMockups\Views\Shared\_Layout.cshtml
+--file=F:\MobifinMockups\MobifinMockups\Views\Shared\_ValidationScriptsPartial.cshtml
+--file=F:\MobifinMockups\MobifinMockups\Views\_ViewImports.cshtml
+--file=F:\MobifinMockups\MobifinMockups\Views\_ViewStart.cshtml

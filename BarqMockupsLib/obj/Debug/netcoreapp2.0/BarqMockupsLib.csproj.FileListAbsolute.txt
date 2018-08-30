@@ -1,0 +1,9 @@
+E:\MobifinMockups\BarqMockupsLib\bin\Debug\netcoreapp2.0\BarqMockupsLib.deps.json
+E:\MobifinMockups\BarqMockupsLib\bin\Debug\netcoreapp2.0\BarqMockupsLib.dll
+E:\MobifinMockups\BarqMockupsLib\bin\Debug\netcoreapp2.0\BarqMockupsLib.pdb
+E:\MobifinMockups\BarqMockupsLib\obj\Debug\netcoreapp2.0\BarqMockupsLib.csprojAssemblyReference.cache
+E:\MobifinMockups\BarqMockupsLib\obj\Debug\netcoreapp2.0\BarqMockupsLib.csproj.CoreCompileInputs.cache
+E:\MobifinMockups\BarqMockupsLib\obj\Debug\netcoreapp2.0\BarqMockupsLib.AssemblyInfoInputs.cache
+E:\MobifinMockups\BarqMockupsLib\obj\Debug\netcoreapp2.0\BarqMockupsLib.AssemblyInfo.cs
+E:\MobifinMockups\BarqMockupsLib\obj\Debug\netcoreapp2.0\BarqMockupsLib.dll
+E:\MobifinMockups\BarqMockupsLib\obj\Debug\netcoreapp2.0\BarqMockupsLib.pdb

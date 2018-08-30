@@ -1,0 +1,10 @@
+E:\MobifinMockups\BarqMockupsLib\bin\Release\netcoreapp2.1\BarqMockupsLib.deps.json
+E:\MobifinMockups\BarqMockupsLib\bin\Release\netcoreapp2.1\BarqMockupsLib.runtimeconfig.json
+E:\MobifinMockups\BarqMockupsLib\bin\Release\netcoreapp2.1\BarqMockupsLib.runtimeconfig.dev.json
+E:\MobifinMockups\BarqMockupsLib\bin\Release\netcoreapp2.1\BarqMockupsLib.dll
+E:\MobifinMockups\BarqMockupsLib\bin\Release\netcoreapp2.1\BarqMockupsLib.pdb
+E:\MobifinMockups\BarqMockupsLib\obj\Release\netcoreapp2.1\BarqMockupsLib.csproj.CoreCompileInputs.cache
+E:\MobifinMockups\BarqMockupsLib\obj\Release\netcoreapp2.1\BarqMockupsLib.AssemblyInfoInputs.cache
+E:\MobifinMockups\BarqMockupsLib\obj\Release\netcoreapp2.1\BarqMockupsLib.AssemblyInfo.cs
+E:\MobifinMockups\BarqMockupsLib\obj\Release\netcoreapp2.1\BarqMockupsLib.dll
+E:\MobifinMockups\BarqMockupsLib\obj\Release\netcoreapp2.1\BarqMockupsLib.pdb

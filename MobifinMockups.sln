@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27004.2009
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BarqMockupsLib", "BarqMockupsLib\BarqMockupsLib.csproj", "{EC4C5ACB-3B44-480C-AF42-F038A6091625}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MobifinMockupsX2", "MobifinMockupsX2\MobifinMockupsX2.csproj", "{071584C2-FDD6-4BB1-8BD3-B30A6BF60280}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{EC4C5ACB-3B44-480C-AF42-F038A6091625}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EC4C5ACB-3B44-480C-AF42-F038A6091625}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EC4C5ACB-3B44-480C-AF42-F038A6091625}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EC4C5ACB-3B44-480C-AF42-F038A6091625}.Release|Any CPU.Build.0 = Release|Any CPU
+		{071584C2-FDD6-4BB1-8BD3-B30A6BF60280}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{071584C2-FDD6-4BB1-8BD3-B30A6BF60280}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{071584C2-FDD6-4BB1-8BD3-B30A6BF60280}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{071584C2-FDD6-4BB1-8BD3-B30A6BF60280}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {4592F60E-61F0-4494-8498-CB038A5DF1D9}
+	EndGlobalSection
+EndGlobal

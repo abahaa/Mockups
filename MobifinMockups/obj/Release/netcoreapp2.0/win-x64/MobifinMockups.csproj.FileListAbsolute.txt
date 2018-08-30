@@ -1,0 +1,14 @@
+E:\Temp\MobifinMockups\MobifinMockups\bin\Release\netcoreapp2.0\win-x64\hostpolicy.dll
+E:\Temp\MobifinMockups\MobifinMockups\bin\Release\netcoreapp2.0\win-x64\hostfxr.dll
+E:\Temp\MobifinMockups\MobifinMockups\bin\Release\netcoreapp2.0\win-x64\MobifinMockups.exe
+E:\Temp\MobifinMockups\MobifinMockups\bin\Release\netcoreapp2.0\win-x64\MobifinMockups.deps.json
+E:\Temp\MobifinMockups\MobifinMockups\bin\Release\netcoreapp2.0\win-x64\MobifinMockups.runtimeconfig.json
+E:\Temp\MobifinMockups\MobifinMockups\bin\Release\netcoreapp2.0\win-x64\MobifinMockups.runtimeconfig.dev.json
+E:\Temp\MobifinMockups\MobifinMockups\bin\Release\netcoreapp2.0\win-x64\MobifinMockups.dll
+E:\Temp\MobifinMockups\MobifinMockups\bin\Release\netcoreapp2.0\win-x64\MobifinMockups.pdb
+E:\Temp\MobifinMockups\MobifinMockups\obj\Release\netcoreapp2.0\win-x64\MobifinMockups.csprojAssemblyReference.cache
+E:\Temp\MobifinMockups\MobifinMockups\obj\Release\netcoreapp2.0\win-x64\MobifinMockups.csproj.CoreCompileInputs.cache
+E:\Temp\MobifinMockups\MobifinMockups\obj\Release\netcoreapp2.0\win-x64\MobifinMockups.AssemblyInfoInputs.cache
+E:\Temp\MobifinMockups\MobifinMockups\obj\Release\netcoreapp2.0\win-x64\MobifinMockups.AssemblyInfo.cs
+E:\Temp\MobifinMockups\MobifinMockups\obj\Release\netcoreapp2.0\win-x64\MobifinMockups.dll
+E:\Temp\MobifinMockups\MobifinMockups\obj\Release\netcoreapp2.0\win-x64\MobifinMockups.pdb

@@ -1,0 +1,13 @@
+E:\MobifinMockups\MobifinMockups\bin\Release\netcoreapp2.1\MobifinMockups.deps.json
+E:\MobifinMockups\MobifinMockups\bin\Release\netcoreapp2.1\MobifinMockups.runtimeconfig.json
+E:\MobifinMockups\MobifinMockups\bin\Release\netcoreapp2.1\MobifinMockups.runtimeconfig.dev.json
+E:\MobifinMockups\MobifinMockups\bin\Release\netcoreapp2.1\MobifinMockups.dll
+E:\MobifinMockups\MobifinMockups\bin\Release\netcoreapp2.1\MobifinMockups.pdb
+E:\MobifinMockups\MobifinMockups\bin\Release\netcoreapp2.1\BarqMockupsLib.dll
+E:\MobifinMockups\MobifinMockups\bin\Release\netcoreapp2.1\BarqMockupsLib.pdb
+E:\MobifinMockups\MobifinMockups\obj\Release\netcoreapp2.1\MobifinMockups.csprojResolveAssemblyReference.cache
+E:\MobifinMockups\MobifinMockups\obj\Release\netcoreapp2.1\MobifinMockups.csproj.CoreCompileInputs.cache
+E:\MobifinMockups\MobifinMockups\obj\Release\netcoreapp2.1\MobifinMockups.AssemblyInfoInputs.cache
+E:\MobifinMockups\MobifinMockups\obj\Release\netcoreapp2.1\MobifinMockups.AssemblyInfo.cs
+E:\MobifinMockups\MobifinMockups\obj\Release\netcoreapp2.1\MobifinMockups.dll
+E:\MobifinMockups\MobifinMockups\obj\Release\netcoreapp2.1\MobifinMockups.pdb
