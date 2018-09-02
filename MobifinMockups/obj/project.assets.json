@@ -4984,21 +4984,6 @@
         "runtime": {
           "lib/netstandard1.3/Microsoft.WindowsAzure.Storage.dll": {}
         }
-      },
-      "BarqMockupsLib/1.0.0": {
-        "type": "project",
-        "framework": ".NETCoreApp,Version=v2.1",
-        "dependencies": {
-          "EntityFrameworkCore.SqlServerCompact40": "2.1.0.4",
-          "Microsoft.EntityFrameworkCore.SqlServer": "2.1.2",
-          "Microsoft.EntityFrameworkCore.Tools": "2.1.2"
-        },
-        "compile": {
-          "bin/placeholder/BarqMockupsLib.dll": {}
-        },
-        "runtime": {
-          "bin/placeholder/BarqMockupsLib.dll": {}
-        }
       }
     }
   },
@@ -13067,16 +13052,11 @@
         "windowsazure.storage.8.1.4.nupkg.sha512",
         "windowsazure.storage.nuspec"
       ]
-    },
-    "BarqMockupsLib/1.0.0": {
-      "type": "project",
-      "path": "../BarqMockupsLib/BarqMockupsLib.csproj",
-      "msbuildProject": "../BarqMockupsLib/BarqMockupsLib.csproj"
     }
   },
   "projectFileDependencyGroups": {
     ".NETCoreApp,Version=v2.1": [
-      "BarqMockupsLib >= 1.0.0",
+      "E:\\MobifinMockups\\BarqMockupsLib\\BarqMockupsLib.csproj",
       "EntityFrameworkCore.SqlServerCompact40 >= 2.1.0.4",
       "Microsoft.AspNet.WebApi.Client >= 5.2.6",
       "Microsoft.AspNetCore.All >= 2.0.3",
@@ -13178,6 +13158,15 @@
     }
   },
   "logs": [
+    {
+      "code": "NU1105",
+      "level": "Error",
+      "message": "Unable to find project information for 'E:\\MobifinMockups\\BarqMockupsLib\\BarqMockupsLib.csproj'. The project file may be invalid or missing targets required for restore.",
+      "libraryId": "E:\\MobifinMockups\\BarqMockupsLib\\BarqMockupsLib.csproj",
+      "targetGraphs": [
+        ".NETCoreApp,Version=v2.1"
+      ]
+    },
     {
       "code": "NU1701",
       "level": "Warning",

@@ -14,6 +14,7 @@ using MobifinMockupsX2.Responses;
 using Newtonsoft.Json;
 using BarqMockupsLib;
 using Microsoft.Extensions.Configuration;
+using MobifinMockupsX2.Constants;
 
 namespace MobifinMockupsX2.Controllers
 {
@@ -41,7 +42,7 @@ namespace MobifinMockupsX2.Controllers
         {
             LoginResponse response = new LoginResponse();
             AccountRep accountRep = new AccountRep(Context);
-
+            int y = ExceptionHandeling.x();
             Account CurrentAccount = accountRep.ValidateCorrectCredentials(request.BasicInfo.MobileNumberInfo.Number, request.Password);
             if (CurrentAccount != null)
             {
@@ -52,43 +53,18 @@ namespace MobifinMockupsX2.Controllers
 
             else
             {
-                List<CodeLabException> allErrors = new List<CodeLabException>();
+                //List<CodeLabException> allErrors = new List<CodeLabException>();
                 try
                 {
-                    FireError();
+                   ExceptionHandeling.FireError((int)ErrorCodes.Wrong_Wallet_Number_OR_Password,Constants.Constants.ExceptionDic[ErrorCodes.Wrong_Wallet_Number_OR_Password]);
                 }
                 catch (CodeLabException codelabExp)
                 {
-                    allErrors.Add(codelabExp);
-                    
-                    ObjectResult res = new ObjectResult(allErrors);
-                    res.ContentTypes.Add("application/json");
-
-                    var formatterSettings = JsonSerializerSettingsProvider.CreateSerializerSettings();
-                    formatterSettings.ReferenceLoopHandling = Newtonsoft.Json.ReferenceLoopHandling.Ignore;
-                    JsonOutputFormatter formatter = new JsonOutputFormatter(formatterSettings, ArrayPool<Char>.Create() );
-
-                    res.Formatters.Add(formatter);
-                    res.StatusCode = 490;
-                    return res;
+                    return ExceptionHandeling.GenerateErrorResponse(codelabExp);
                 }
             }
             return Ok(response);
 
-        }
-
-        private static void FireError()
-        {
-            CodeLabException codelabExp = new CodeLabException
-            {
-                ErrorCode = 1,
-                SubErrorCode = 2,
-                ErrorReferenceNumber = "UU-266169856"
-            };
-            codelabExp.Data.Add("LoggedInId", 88);
-            codelabExp.Data.Add("NoOfTrials", 3);
-            codelabExp.ExtraInfoMessage = "call failed because : مزاجي كده";
-            throw  codelabExp;
         }
 
         [HttpPost("ValidateOTPLogin")]
@@ -99,7 +75,14 @@ namespace MobifinMockupsX2.Controllers
             Account CurrentAccount = accountRep.GetByMSDIN(request.BasicInfo.MobileNumberInfo.Number);
             if (CurrentAccount == null)
             {
-                throw new NotImplementedException();
+                try
+                {
+                    ExceptionHandeling.FireError((int)ErrorCodes.Wrong_Wallet_Number, Constants.Constants.ExceptionDic[ErrorCodes.Wrong_Wallet_Number]);
+                }
+                catch (CodeLabException codelabExp)
+                {
+                    return ExceptionHandeling.GenerateErrorResponse(codelabExp);
+                }
             }
             OTPRep oTPRep = new OTPRep(Context);
             bool access = oTPRep.ValidateOTP(request.Otp, CurrentAccount.LastOtpid);
@@ -112,11 +95,14 @@ namespace MobifinMockupsX2.Controllers
             }
             else
             {
-                //Not Emplemented Error Code Yet
-                response.Status = 2;
-                response.CurrentBalance = 0;
-                response.AdditionalInfo = "Login Failed with otp " + request.Otp + "\n"
-                    + "Basic Info: " + request.BasicInfo.ToString();
+                try
+                {
+                    ExceptionHandeling.FireError((int)ErrorCodes.Wrong_Otp, Constants.Constants.ExceptionDic[ErrorCodes.Wrong_Otp]);
+                }
+                catch (CodeLabException codelabExp)
+                {
+                    return ExceptionHandeling.GenerateErrorResponse(codelabExp);
+                }
             }
             return Ok(response);
         }
@@ -124,73 +110,6 @@ namespace MobifinMockupsX2.Controllers
 
     }
 
-    [Serializable]
-    public class CodeLabException : Exception
-    {
-        int _ErrorCode = -1;
-        string _ErrorReferenceNumber = "";
-        int _SubErrorCode = -1;
-        string _ExtraInfoMessage = string.Empty;
 
-        public override void GetObjectData(SerializationInfo info, StreamingContext context)
-        {
-            info.AddValue("errorCode", ErrorCode);
-            info.AddValue("errorRefNO", ErrorReferenceNumber);
-            info.AddValue("subErrorCode", SubErrorCode);
-            info.AddValue("extraInfoMessage", ExtraInfoMessage);
-            base.GetObjectData(info, context);
-        }
-        //Dictionary<string , object> _AssiciatedParameters = new Dictionary<string, object>();
-
-        /// <summary>
-        /// error code for the problem.
-        /// Example: InvalidEntityDefinition
-        /// </summary>
-        /// 
-        [JsonProperty("errorCode")]
-        public int ErrorCode
-        {
-            get => _ErrorCode;
-            set => _ErrorCode = value;
-        }
-
-        [JsonProperty("errorRefNO")]
-        public string ErrorReferenceNumber
-        {
-            get => _ErrorReferenceNumber;
-            set => _ErrorReferenceNumber = value;
-        }
-
-
-        /// <summary>
-        /// a more specific code to the above one. This is optional
-        /// Example: InvalidUserNameLength
-        /// </summary>
-        /// 
-        [JsonProperty("subErrorCode")]
-        public int SubErrorCode
-        {
-            get => _SubErrorCode;
-            set => _SubErrorCode = value;
-        }
-
-        [JsonProperty("extraInfoMessage")]
-        public string ExtraInfoMessage { get => _ExtraInfoMessage; set => _ExtraInfoMessage = value; }
-
-
-        public CodeLabException() : base()
-        {
-
-        }
-
-        public CodeLabException(string message) : base(message)
-        { }
-
-        public CodeLabException(string message, Exception innerException) : base(message, innerException)
-        { }
-
-        protected CodeLabException(SerializationInfo info, StreamingContext context) : base(info, context)
-        { }
-    }
 
 }

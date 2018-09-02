@@ -1,9 +1,3 @@
-E:\MobifinMockups\MobifinMockupsX2\obj\Debug\netcoreapp2.1\MobifinMockupsX2.csprojResolveAssemblyReference.cache
-E:\MobifinMockups\MobifinMockupsX2\obj\Debug\netcoreapp2.1\MobifinMockupsX2.csproj.CoreCompileInputs.cache
-E:\MobifinMockups\MobifinMockupsX2\obj\Debug\netcoreapp2.1\MobifinMockupsX2.RazorAssemblyInfo.cache
-E:\MobifinMockups\MobifinMockupsX2\obj\Debug\netcoreapp2.1\MobifinMockupsX2.RazorAssemblyInfo.cs
-E:\MobifinMockups\MobifinMockupsX2\obj\Debug\netcoreapp2.1\MobifinMockupsX2.AssemblyInfoInputs.cache
-E:\MobifinMockups\MobifinMockupsX2\obj\Debug\netcoreapp2.1\MobifinMockupsX2.AssemblyInfo.cs
 E:\MobifinMockups\MobifinMockupsX2\bin\Debug\netcoreapp2.1\MobifinMockupsX2.deps.json
 E:\MobifinMockups\MobifinMockupsX2\bin\Debug\netcoreapp2.1\MobifinMockupsX2.runtimeconfig.json
 E:\MobifinMockups\MobifinMockupsX2\bin\Debug\netcoreapp2.1\MobifinMockupsX2.runtimeconfig.dev.json
@@ -11,6 +5,13 @@ E:\MobifinMockups\MobifinMockupsX2\bin\Debug\netcoreapp2.1\MobifinMockupsX2.dll
 E:\MobifinMockups\MobifinMockupsX2\bin\Debug\netcoreapp2.1\MobifinMockupsX2.pdb
 E:\MobifinMockups\MobifinMockupsX2\bin\Debug\netcoreapp2.1\BarqMockupsLib.dll
 E:\MobifinMockups\MobifinMockupsX2\bin\Debug\netcoreapp2.1\BarqMockupsLib.pdb
+E:\MobifinMockups\MobifinMockupsX2\obj\Debug\netcoreapp2.1\MobifinMockupsX2.csproj.CoreCompileInputs.cache
+E:\MobifinMockups\MobifinMockupsX2\obj\Debug\netcoreapp2.1\MobifinMockupsX2.RazorAssemblyInfo.cache
+E:\MobifinMockups\MobifinMockupsX2\obj\Debug\netcoreapp2.1\MobifinMockupsX2.RazorAssemblyInfo.cs
+E:\MobifinMockups\MobifinMockupsX2\obj\Debug\netcoreapp2.1\MobifinMockupsX2.AssemblyInfoInputs.cache
+E:\MobifinMockups\MobifinMockupsX2\obj\Debug\netcoreapp2.1\MobifinMockupsX2.AssemblyInfo.cs
 E:\MobifinMockups\MobifinMockupsX2\obj\Debug\netcoreapp2.1\MobifinMockupsX2.RazorTargetAssemblyInfo.cache
 E:\MobifinMockups\MobifinMockupsX2\obj\Debug\netcoreapp2.1\MobifinMockupsX2.dll
 E:\MobifinMockups\MobifinMockupsX2\obj\Debug\netcoreapp2.1\MobifinMockupsX2.pdb
+E:\MobifinMockups\MobifinMockupsX2\obj\Debug\netcoreapp2.1\MobifinMockupsX2.csprojAssemblyReference.cache
+E:\MobifinMockups\MobifinMockupsX2\obj\Debug\netcoreapp2.1\MobifinMockupsX2.csproj.CopyComplete

@@ -5,7 +5,6 @@ E:\MobifinMockups\MobifinMockupsX2\bin\Release\netcoreapp2.1\MobifinMockupsX2.dl
 E:\MobifinMockups\MobifinMockupsX2\bin\Release\netcoreapp2.1\MobifinMockupsX2.pdb
 E:\MobifinMockups\MobifinMockupsX2\bin\Release\netcoreapp2.1\BarqMockupsLib.dll
 E:\MobifinMockups\MobifinMockupsX2\bin\Release\netcoreapp2.1\BarqMockupsLib.pdb
-E:\MobifinMockups\MobifinMockupsX2\obj\Release\netcoreapp2.1\MobifinMockupsX2.csprojResolveAssemblyReference.cache
 E:\MobifinMockups\MobifinMockupsX2\obj\Release\netcoreapp2.1\MobifinMockupsX2.csproj.CoreCompileInputs.cache
 E:\MobifinMockups\MobifinMockupsX2\obj\Release\netcoreapp2.1\MobifinMockupsX2.RazorAssemblyInfo.cache
 E:\MobifinMockups\MobifinMockupsX2\obj\Release\netcoreapp2.1\MobifinMockupsX2.RazorAssemblyInfo.cs
@@ -14,3 +13,5 @@ E:\MobifinMockups\MobifinMockupsX2\obj\Release\netcoreapp2.1\MobifinMockupsX2.As
 E:\MobifinMockups\MobifinMockupsX2\obj\Release\netcoreapp2.1\MobifinMockupsX2.RazorTargetAssemblyInfo.cache
 E:\MobifinMockups\MobifinMockupsX2\obj\Release\netcoreapp2.1\MobifinMockupsX2.dll
 E:\MobifinMockups\MobifinMockupsX2\obj\Release\netcoreapp2.1\MobifinMockupsX2.pdb
+E:\MobifinMockups\MobifinMockupsX2\obj\Release\netcoreapp2.1\MobifinMockupsX2.csprojAssemblyReference.cache
+E:\MobifinMockups\MobifinMockupsX2\obj\Release\netcoreapp2.1\MobifinMockupsX2.csproj.CopyComplete

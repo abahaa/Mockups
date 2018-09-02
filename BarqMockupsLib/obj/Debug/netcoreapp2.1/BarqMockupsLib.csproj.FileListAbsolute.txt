@@ -8,4 +8,4 @@ E:\MobifinMockups\BarqMockupsLib\obj\Debug\netcoreapp2.1\BarqMockupsLib.Assembly
 E:\MobifinMockups\BarqMockupsLib\obj\Debug\netcoreapp2.1\BarqMockupsLib.AssemblyInfo.cs
 E:\MobifinMockups\BarqMockupsLib\obj\Debug\netcoreapp2.1\BarqMockupsLib.dll
 E:\MobifinMockups\BarqMockupsLib\obj\Debug\netcoreapp2.1\BarqMockupsLib.pdb
-E:\MobifinMockups\BarqMockupsLib\obj\Debug\netcoreapp2.1\BarqMockupsLib.csprojResolveAssemblyReference.cache
+E:\MobifinMockups\BarqMockupsLib\obj\Debug\netcoreapp2.1\BarqMockupsLib.csprojAssemblyReference.cache
