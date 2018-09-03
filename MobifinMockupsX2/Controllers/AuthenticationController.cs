@@ -56,7 +56,7 @@ namespace MobifinMockupsX2.Controllers
                 //List<CodeLabException> allErrors = new List<CodeLabException>();
                 try
                 {
-                   ExceptionHandeling.FireError((int)ErrorCodes.Wrong_Wallet_Number_OR_Password,Constants.Constants.ExceptionDic[ErrorCodes.Wrong_Wallet_Number_OR_Password]);
+                   ExceptionHandeling.FireError((int)ErrorCode.Wrong_Input_Error,(int)WrongInputError.Wrong_Wallet_Number_OR_Password,Constants.Constants.WrongInputDic[WrongInputError.Wrong_Wallet_Number_OR_Password]);
                 }
                 catch (CodeLabException codelabExp)
                 {
@@ -77,7 +77,7 @@ namespace MobifinMockupsX2.Controllers
             {
                 try
                 {
-                    ExceptionHandeling.FireError((int)ErrorCodes.Wrong_Wallet_Number, Constants.Constants.ExceptionDic[ErrorCodes.Wrong_Wallet_Number]);
+                    ExceptionHandeling.FireError((int)ErrorCode.Wrong_Input_Error, (int)WrongInputError.Wrong_Wallet_Number, Constants.Constants.WrongInputDic[WrongInputError.Wrong_Wallet_Number]);
                 }
                 catch (CodeLabException codelabExp)
                 {
@@ -97,7 +97,7 @@ namespace MobifinMockupsX2.Controllers
             {
                 try
                 {
-                    ExceptionHandeling.FireError((int)ErrorCodes.Wrong_Otp, Constants.Constants.ExceptionDic[ErrorCodes.Wrong_Otp]);
+                    ExceptionHandeling.FireError((int)ErrorCode.Wrong_Input_Error, (int)WrongInputError.Wrong_Otp, Constants.Constants.WrongInputDic[WrongInputError.Wrong_Otp]);
                 }
                 catch (CodeLabException codelabExp)
                 {

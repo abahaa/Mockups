@@ -16,12 +16,12 @@ namespace MobifinMockupsX2
         {
             return 2;
         }
-        public static void FireError(int ErrorCode , string ExtraInfo = "")
+        public static void FireError(int ErrorCode,int SubErrorCode , string ExtraInfo = "")
         {
             CodeLabException codelabExp = new CodeLabException
             {
                 ErrorCode = ErrorCode,
-                SubErrorCode = 2,
+                SubErrorCode = SubErrorCode,
                 ErrorReferenceNumber = "UU-266169856"
             };
 

@@ -44,20 +44,31 @@ namespace MobifinMockupsX2.Controllers
             Account fromWallet = accountRep.GetByMSDIN(request.BasicInfo.MobileNumberInfo.Number);
             Account toWallet = accountRep.GetByMSDIN(request.ToWalletNumber);
             decimal totalAmount = (decimal)request.TotalAmount;
-
-            byte[] data = Convert.FromBase64String(request.MPin);
-            string DecodedMPIN = Encoding.UTF8.GetString(data);
+            string DecodedMPIN = "";
             try
             {
+                byte[] data = Convert.FromBase64String(request.MPin);
+                DecodedMPIN = Encoding.UTF8.GetString(data);
+            }
+            catch(Exception ex)
+            {
+                DecodedMPIN = "";
+            }
+            try
+            {
+                if(fromWallet == toWallet)
+                {
+                    ExceptionHandeling.FireError((int)ErrorCode.Payment_Error, (int)PaymentError.Same_From_To_Wallet, Constants.Constants.PaymentErrorDic[PaymentError.Same_From_To_Wallet]);
+                }
                 if (fromWallet != null && toWallet != null)
                 {
                     if (fromWallet.Mpin == DecodedMPIN)
                     {         
                         if (toWallet.Balance >= totalAmount)
                         {
-                            if (request.TotalAmount > Constants.Constants.MaxLimit)
+                            if (request.TotalAmount <= Constants.Constants.MaxLimit)
                             {
-                                if (request.TotalAmount < Constants.Constants.MinLimit)
+                                if (request.TotalAmount >= Constants.Constants.MinLimit)
                                 {
                                     fromWallet.Balance -= totalAmount;
                                     toWallet.Balance += totalAmount;
@@ -88,22 +99,22 @@ namespace MobifinMockupsX2.Controllers
                                    
                                 }
                                 else
-                                    ExceptionHandeling.FireError((int)ErrorCodes.Less_Than_Min_Amount, Constants.Constants.ExceptionDic[ErrorCodes.Less_Than_Min_Amount]);
+                                    ExceptionHandeling.FireError((int)ErrorCode.Payment_Error, (int)PaymentError.Less_Than_Min_Amount, Constants.Constants.PaymentErrorDic[PaymentError.Less_Than_Min_Amount]);
 
                             }
                             else
-                                ExceptionHandeling.FireError((int)ErrorCodes.Greater_Than_Max_Amount, Constants.Constants.ExceptionDic[ErrorCodes.Greater_Than_Max_Amount]);
+                                ExceptionHandeling.FireError((int)ErrorCode.Payment_Error, (int)PaymentError.Greater_Than_Max_Amount, Constants.Constants.PaymentErrorDic[PaymentError.Greater_Than_Max_Amount]);
 
                         }
                         else
-                            ExceptionHandeling.FireError((int)ErrorCodes.Insufficient_Balance, Constants.Constants.ExceptionDic[ErrorCodes.Insufficient_Balance]);
+                            ExceptionHandeling.FireError((int)ErrorCode.Payment_Error, (int)PaymentError.Insufficient_Balance, Constants.Constants.PaymentErrorDic[PaymentError.Insufficient_Balance]);
                     }
                     else
-                        ExceptionHandeling.FireError((int)ErrorCodes.Wrong_MPIN, Constants.Constants.ExceptionDic[ErrorCodes.Wrong_MPIN]);
+                        ExceptionHandeling.FireError((int)ErrorCode.Wrong_Input_Error, (int)WrongInputError.Wrong_MPIN, Constants.Constants.WrongInputDic[WrongInputError.Wrong_MPIN]);
 
                 }
                 else
-                    ExceptionHandeling.FireError((int)ErrorCodes.Wrong_Wallet_Number, Constants.Constants.ExceptionDic[ErrorCodes.Wrong_Wallet_Number]);
+                    ExceptionHandeling.FireError((int)ErrorCode.Wrong_Input_Error, (int)WrongInputError.Wrong_Wallet_Number, Constants.Constants.WrongInputDic[WrongInputError.Wrong_Wallet_Number]);
             }
             catch (CodeLabException codelabExp)
             {
@@ -112,6 +123,7 @@ namespace MobifinMockupsX2.Controllers
             return Ok(response);
 
         }
+
         [HttpPost("CheckTransactionStatus")]
         public IActionResult CheckTransactionStatus([FromBody]CheckStatusRequest request)
         {
@@ -136,11 +148,11 @@ namespace MobifinMockupsX2.Controllers
                         response.CurrencyCode = transaction.CurrencyCode;
                     }
                     else
-                        ExceptionHandeling.FireError((int)ErrorCodes.Transaction_Id_Not_Exist, Constants.Constants.ExceptionDic[ErrorCodes.Transaction_Id_Not_Exist]);
+                        ExceptionHandeling.FireError((int)ErrorCode.Payment_Error, (int)PaymentError.Transaction_Id_Not_Exist, Constants.Constants.PaymentErrorDic[PaymentError.Transaction_Id_Not_Exist]);
 
                 }
                 else
-                    ExceptionHandeling.FireError((int)ErrorCodes.Wrong_Wallet_Number, Constants.Constants.ExceptionDic[ErrorCodes.Wrong_Wallet_Number]);
+                    ExceptionHandeling.FireError((int)ErrorCode.Wrong_Input_Error, (int)WrongInputError.Wrong_Wallet_Number, Constants.Constants.WrongInputDic[WrongInputError.Wrong_Wallet_Number]);
             }
             catch (CodeLabException codelabExp)
             {
