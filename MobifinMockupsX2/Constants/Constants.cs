@@ -94,7 +94,7 @@ namespace MobifinMockupsX2.Constants
                 if (_GeneralErrorDic == null)
                 {
                     _GeneralErrorDic = new Dictionary<GeneralError, string>();
-                    _GeneralErrorDic.Add(GeneralError.Nullable_Request, "Check your request is sent as expected");
+                    _GeneralErrorDic.Add(GeneralError.Nullable_Request, "your request has not been sent as expected");
                 }
                 return _GeneralErrorDic;
             }

@@ -40,6 +40,17 @@ namespace MobifinMockupsX2.Controllers
         [HttpPost("ValidateCredentials")]
         public IActionResult ValidateCredentials([FromBody]LoginRequest request)
         {
+            if(!request.ValidateObject())
+            {
+                try
+                {
+                    ExceptionHandeling.FireError((int)ErrorCode.General_Error, (int)GeneralError.Nullable_Request, Constants.Constants.GeneralErrorDic[GeneralError.Nullable_Request]);
+                }
+                catch (CodeLabException codelabExp)
+                {
+                    return ExceptionHandeling.GenerateErrorResponse(codelabExp);
+                }
+            }
             LoginResponse response = new LoginResponse();
             AccountRep accountRep = new AccountRep(Context);
             int y = ExceptionHandeling.x();
@@ -70,6 +81,17 @@ namespace MobifinMockupsX2.Controllers
         [HttpPost("ValidateOTPLogin")]
         public IActionResult ValidateOTPLogin([FromBody]OTPValidatorRequest request)
         {
+            if (!request.ValidateObject())
+            {
+                try
+                {
+                    ExceptionHandeling.FireError((int)ErrorCode.General_Error, (int)GeneralError.Nullable_Request, Constants.Constants.GeneralErrorDic[GeneralError.Nullable_Request]);
+                }
+                catch (CodeLabException codelabExp)
+                {
+                    return ExceptionHandeling.GenerateErrorResponse(codelabExp);
+                }
+            }
             OTPValidatorResponse response = new OTPValidatorResponse();
             AccountRep accountRep = new AccountRep(Context);
             Account CurrentAccount = accountRep.GetByMSDIN(request.BasicInfo.MobileNumberInfo.Number);

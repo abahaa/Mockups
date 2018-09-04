@@ -10,5 +10,16 @@ namespace MobifinMockupsX2.Requests
     {
         [JsonProperty("transactionId")]
         public string TransactionId { get; set; }
+
+        public override bool ValidateObject()
+        {
+            bool ret = false;
+            if (TransactionId != null)
+            {
+                ret = true;
+            }
+            return ret & base.ValidateObject();
+
+        }
     }
 }

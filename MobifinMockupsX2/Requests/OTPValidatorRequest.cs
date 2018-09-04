@@ -12,6 +12,17 @@ namespace MobifinMockupsX2.Requests
 
         [JsonProperty("Otp")]
         public string Otp { get; set; }
+
+        public override bool ValidateObject()
+        {
+            bool ret = false;
+            if (Otp != null)
+            {
+                ret = true;
+            }
+            return ret & base.ValidateObject();
+
+        }
     }
 
 }

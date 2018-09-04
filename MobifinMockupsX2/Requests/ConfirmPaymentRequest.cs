@@ -13,7 +13,7 @@ namespace MobifinMockupsX2.Requests
         public string ToWalletNumber { get; set; }
 
         [JsonProperty("totalAmount")]
-        public double TotalAmount { get; set; }
+        public double? TotalAmount { get; set; }
 
         [JsonProperty("currencyCode")]
         public string CurrencyCode { get; set; }
@@ -26,5 +26,16 @@ namespace MobifinMockupsX2.Requests
 
         [JsonProperty("MPin")]
         public string MPin { get; set; }
+
+        public override bool ValidateObject()
+        {
+            bool ret = false;
+            if (TransactionId != null && ToWalletNumber != null && CurrencyCode != null && TransactionRef != null && TotalAmount != null && MPin != null)
+            {
+                ret = true;
+            }
+            return ret & base.ValidateObject();
+
+        }
     }
 }

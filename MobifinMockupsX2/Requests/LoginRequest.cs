@@ -10,6 +10,17 @@ namespace MobifinMockupsX2.Requests
     {
         [JsonProperty("password")]
         public string Password { get; set; }
+
+        public override bool ValidateObject()
+        {
+            bool ret = false;
+            if (Password != null)
+            {
+                ret = true;
+            }
+            return ret & base.ValidateObject();
+
+        }
     }
 
 }

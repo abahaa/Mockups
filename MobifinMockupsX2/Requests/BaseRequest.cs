@@ -62,13 +62,32 @@ namespace MobifinMockupsX2.Requests
         public string Number { get; set; }
     }
     [Serializable]
-    public class BaseRequest
+    public abstract class BaseRequest
     {
 
         [JsonProperty("basicInfo")]
         public BasicInfo BasicInfo { get; set; }
 
+
+        public virtual bool ValidateObject()
+        {
+            if (BasicInfo != null)
+            {
+                if (BasicInfo.AppInfo != null && BasicInfo.DeviceInfo != null && BasicInfo.MobileNumberInfo != null)
+                {
+                    if (BasicInfo.AppInfo.ApplicationId != null && BasicInfo.AppInfo.ApplicationVersion != null
+                        && BasicInfo.DeviceInfo.Platform != null && BasicInfo.DeviceInfo.PlatformVersion != null && BasicInfo.DeviceInfo.DeviceId != null
+                        && BasicInfo.MobileNumberInfo.Number !=null && BasicInfo.MobileNumberInfo.Region !=null)
+                    {
+                        return true;
+                    }
+                }
+            }
+            return false;
+        }
+
     }
+
 
 
 }

@@ -27,11 +27,22 @@ namespace MobifinMockupsX2.Controllers
         [HttpPost("EstimateTransactionDetails")]
         public IActionResult EstimateTransactionDetails([FromBody]MerchantPaymentRequest request)
         {
+            if (!request.ValidateObject())
+            {
+                try
+                {
+                    ExceptionHandeling.FireError((int)ErrorCode.General_Error, (int)GeneralError.Nullable_Request, Constants.Constants.GeneralErrorDic[GeneralError.Nullable_Request]);
+                }
+                catch (CodeLabException codelabExp)
+                {
+                    return ExceptionHandeling.GenerateErrorResponse(codelabExp);
+                }
+            }
             MerchantPaymentResponse response = new MerchantPaymentResponse();
             response.Amount = new Amount();
             response.Amount.ServiceFees = Constants.Constants.TransactionFees;
-            response.Amount.Commission = request.Amount - 1;
-            response.Amount.Total = request.Amount + Constants.Constants.TransactionFees;
+            response.Amount.Commission = (long)request.Amount - 1;
+            response.Amount.Total = (long)request.Amount + Constants.Constants.TransactionFees;
             response.TransactionId = request.TransactionId + "--" + "\n" + "Basic Info:" + request.BasicInfo.ToString();
             return Ok(response);
         }
@@ -39,6 +50,17 @@ namespace MobifinMockupsX2.Controllers
         [HttpPost("PerformTransaction")]
         public IActionResult PerformTransaction([FromBody]ConfirmPaymentRequest request)
         {
+            if (!request.ValidateObject())
+            {
+                try
+                {
+                    ExceptionHandeling.FireError((int)ErrorCode.General_Error, (int)GeneralError.Nullable_Request, Constants.Constants.GeneralErrorDic[GeneralError.Nullable_Request]);
+                }
+                catch (CodeLabException codelabExp)
+                {
+                    return ExceptionHandeling.GenerateErrorResponse(codelabExp);
+                }
+            }
             ConfirmPaymentResponse response = new ConfirmPaymentResponse();
             AccountRep accountRep = new AccountRep(Context);
             Account fromWallet = accountRep.GetByMSDIN(request.BasicInfo.MobileNumberInfo.Number);
@@ -56,12 +78,12 @@ namespace MobifinMockupsX2.Controllers
             }
             try
             {
-                if(fromWallet == toWallet)
-                {
-                    ExceptionHandeling.FireError((int)ErrorCode.Payment_Error, (int)PaymentError.Same_From_To_Wallet, Constants.Constants.PaymentErrorDic[PaymentError.Same_From_To_Wallet]);
-                }
                 if (fromWallet != null && toWallet != null)
                 {
+                    if (fromWallet == toWallet)
+                    {
+                        ExceptionHandeling.FireError((int)ErrorCode.Payment_Error, (int)PaymentError.Same_From_To_Wallet, Constants.Constants.PaymentErrorDic[PaymentError.Same_From_To_Wallet]);
+                    }
                     if (fromWallet.Mpin == DecodedMPIN)
                     {         
                         if (toWallet.Balance >= totalAmount)
@@ -127,6 +149,17 @@ namespace MobifinMockupsX2.Controllers
         [HttpPost("CheckTransactionStatus")]
         public IActionResult CheckTransactionStatus([FromBody]CheckStatusRequest request)
         {
+            if (!request.ValidateObject())
+            {
+                try
+                {
+                    ExceptionHandeling.FireError((int)ErrorCode.General_Error, (int)GeneralError.Nullable_Request, Constants.Constants.GeneralErrorDic[GeneralError.Nullable_Request]);
+                }
+                catch (CodeLabException codelabExp)
+                {
+                    return ExceptionHandeling.GenerateErrorResponse(codelabExp);
+                }
+            }
             ConfirmPaymentResponse response = new ConfirmPaymentResponse();
             TransactionRep transactionRep = new TransactionRep(Context);
             AccountRep accountRep = new AccountRep(Context);
